@@ -8,6 +8,7 @@
 /* серый цвет иконок #AFB1B8 */
 /* акцент #2196f3 */
 /* хувер акцента #188CE8 */
+/* оверлей карточек портфолио background: rgba(33, 150, 243, 0.9) */
 /* цвет бордера хедера #ececec */
 /* цвет бордера карточек rgba(238, 238, 238, 1) */
 /* марджин сетки карточек --card-set-gap */
@@ -24,6 +25,7 @@
   --icon-grey-color: #afb1b8;
   --accent-color: #2196f3;
   --accent-hoover-color: #188ce8;
+  --portfolio-card-overlay-color: rgba(33, 150, 243, 0.9);
   --header-border-color: #ececec;
   --card-border-color: rgba(238, 238, 238, 1);
   --card-set-gap: 30px;
@@ -169,12 +171,12 @@ header > .container {
 }
 
 .current-page::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
 
-  background-color: var(--accent-color) ;
+  background-color: var(--accent-color);
   height: 4px;
   width: 100%;
   border-radius: 2px;
@@ -367,16 +369,15 @@ header > .container {
   background-color: var(--overlays-grey-color);
 }
 
-.activity-text{
+.activity-text {
   color: var(--primary-white-color);
-font-family: Roboto;
-font-size: 14px;
-font-style: normal;
-font-weight: 700;
-line-height: 16px;
-letter-spacing: 0.03em;
-text-align: center;
-
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 
 /* our team */
@@ -736,4 +737,38 @@ footer .logo {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+}
+
+.project-card-thumb {
+  position: relative;
+}
+
+.project-card-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  height: 294px;
+  width: 100%;
+
+  padding: 63px 24px;
+  background-color: var(--portfolio-card-overlay-color);
+
+  opacity: 0;
+}
+
+.overlay-text {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--primary-white-color);
+}
+
+.project-card-thumb:hover .project-card-overlay,
+.project-card-thumb:focus .project-card-overlay {
+  opacity: 1;
 }
