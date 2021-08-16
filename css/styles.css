@@ -161,6 +161,8 @@ header > .container {
   padding: 32px 0px;
 
   color: var(--title-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -197,6 +199,7 @@ header > .container {
 .contacts-item .link {
   color: var(--primary-text-color);
   display: flex;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-item-icon {
@@ -260,6 +263,8 @@ header > .container {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -462,6 +467,8 @@ header > .container {
   border-radius: 50%;
   color: var(--icon-grey-color);
   background-color: var(--primary-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-thumb:hover,
@@ -512,6 +519,9 @@ header > .container {
   color: var(--icon-grey-color);
   border: 1px solid var(--icon-grey-color);
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-thumb:hover,
@@ -609,6 +619,8 @@ footer .logo {
   height: 44px;
   color: var(--primary-white-color);
   background-color: var(--icons-footer-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-thumb:hover,
@@ -661,6 +673,10 @@ footer .logo {
   letter-spacing: 0.03em;
 
   cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
